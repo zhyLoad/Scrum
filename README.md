@@ -3,6 +3,6 @@
 
 
 
-demo/demo123456
+superuser:demo/demo123456
 
 注意：django版本为1.8.0，高版本会报错
