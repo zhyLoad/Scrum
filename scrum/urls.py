@@ -17,12 +17,13 @@ from django.conf.urls import url,include
 #from django.contrib import admin
 #from django.core.urlresolvers import path
 from rest_framework.authtoken.views import obtain_auth_token
-from board.urls import router
-from system.urls import system_router
+from board import router
+from system import system_router
 
 urlpatterns = [
   #  path('admin/', admin.site.urls),
     url(r'^api/token/',obtain_auth_token,name='api-token'),
     url(r'^api/',include(router.urls)),
     url(r'^api/system/', include(system_router.urls)),
+    url(r'^userRolePermission/', include("userRolePermission.urls")),
 ]
