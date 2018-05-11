@@ -10,7 +10,7 @@ class UserProfile(AbstractUser):
    # 生日，可以为空
    birthday = models.DateField(verbose_name=u"生日", null=True, blank=True)
    # 性别 只能男或女，默认女
-   gender = models.CharField( max_length=5, verbose_name=u"性别", choices=GENDER_CHOICES, default="female")
+   gender = models.CharField( max_length=6, verbose_name=u"性别", choices=GENDER_CHOICES, default="female")
    # 地址
    address = models.CharField(max_length=100, verbose_name="地址", default="")
    # 电话
